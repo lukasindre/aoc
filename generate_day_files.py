@@ -19,7 +19,7 @@ def render_template(template_dir, template_file, context, output_dir, output_fil
 @click.command()
 @click.option("--day", required=True, type=int, help="Day of the event")
 @click.option("--year", required=True, type=int, help="Year of the event")
-@click.option("--puzzle_name", required=True, type=str, help="Name of the puzzle")
+@click.option("--puzzle-name", required=True, type=str, help="Name of the puzzle")
 def main(day, year, puzzle_name):
     template_dir = "templates"
     template_files = ["main.py.jinja", "__init__.py.jinja", "README.md.jinja"]

@@ -3,12 +3,13 @@ import os
 
 
 def main():
-    if os.path.exists("aoc/{{ year }}/{{ '%02d'|format(day) }}_{{ puzzle_name }}/input.txt"):
-        with open("aoc/{{ year }}/{{ '%02d'|format(day) }}_{{ puzzle_name }}/input.txt") as f:
+    path = "aoc/{{ year }}/{{ '%02d'|format(day) }}_{{ puzzle_name }}/input.txt"
+    if os.path.exists(path):
+        with open(path) as f:
             data = f.read()
     else:
         data = get_input({{ day }}, {{ year }})
-        with open("aoc/{{ year }}/{{ '%02d'|format(day) }}_{{ puzzle_name }}/input.txt", "w") as f:
+        with open(path) as f:
             f.write(data)
     print(data)
 
