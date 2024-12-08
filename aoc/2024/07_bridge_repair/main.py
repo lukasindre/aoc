@@ -3,7 +3,7 @@ from itertools import product
 
 from aoc.util.get_input import get_input
 
-MISSING_OPERATIONS = ["+", "*", "||"]
+MISSING_OPERATIONS = ["+", "*", "||"]  # remove `||` for part 1
 
 
 class CalibrationEquation:
